@@ -1,9 +1,4 @@
-const ansiHTML = require('ansi-html-community');
-const entities = require('html-entities');
-const theme = require('../theme.js');
 const utils = require('../utils.js');
-
-ansiHTML.setColors(theme);
 
 /**
  * @typedef {Object} CompileErrorTraceProps
@@ -32,10 +27,8 @@ function CompileErrorTrace(document, root, props) {
   }
 
   const stackContainer = document.createElement('pre');
-  stackContainer.innerHTML = entities.decode(
-    ansiHTML(entities.encode(errorParts.join('\n'), { level: 'html5', mode: 'nonAscii' })),
-    { level: 'html5' }
-  );
+  stackContainer.innerHTML = errorParts.join('\n');
+
   stackContainer.style.fontFamily = [
     '"Operator Mono SSm"',
     '"Operator Mono"',

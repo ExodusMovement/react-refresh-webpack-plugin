@@ -1,6 +1,6 @@
 {
   "name": "@exodus/react-refresh-webpack-plugin",
-  "version": "0.5.5-exodus-1",
+  "version": "0.5.5-exodus-2",
   "description": "An **EXPERIMENTAL** Webpack plugin to enable \"Fast Refresh\" (also previously known as _Hot Reloading_) for React components.",
   "keywords": [
     "react",
@@ -56,11 +56,9 @@
     "prepublishOnly": "yarn generate-types"
   },
   "dependencies": {
-    "ansi-html-community": "^0.0.8",
     "common-path-prefix": "^3.0.0",
     "error-stack-parser": "^2.0.6",
     "find-up": "^5.0.0",
-    "html-entities": "^2.1.0",
     "loader-utils": "^2.0.0",
     "schema-utils": "^3.0.0",
     "source-map": "^0.7.3"
